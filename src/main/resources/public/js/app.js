@@ -8,6 +8,10 @@ $( document ).ready(function() {
    });
 });
 
+function newGame() {
+    location.reload();
+}
+
 function placeShip() {
    console.log($( "#shipSelec" ).val());
    console.log($( "#rowSelec" ).val());
