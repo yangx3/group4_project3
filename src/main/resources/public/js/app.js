@@ -1,4 +1,5 @@
 var gameModel;
+var orientation;
 
 $( document ).ready(function() {
   // Handler for .ready() called.
@@ -8,10 +9,33 @@ $( document ).ready(function() {
    });
 });
 
+
+
+//new functions
 function newGame() {
     location.reload();
 }
 
+function changeOrientation(this) {
+    alert(this.text());
+    if(this.text() == "Vertical") {
+        this.text("Horizontal");
+        orientation = "horizontal";
+    } else if(this.text() == "Horizontal") {
+        this.text("Vertical");
+        orientation = "vertical";
+    }
+}
+
+function activateShip(this) {
+
+}
+
+function dontPlacing() {
+
+}
+
+//premade functions
 function placeShip() {
    console.log($( "#shipSelec" ).val());
    console.log($( "#rowSelec" ).val());
